@@ -1,13 +1,12 @@
-import React from "react";
+// ProjectItem.js
+import React from 'react';
 
-function ProjectItem({ name, about, technologies }) {
+function ProjectItem({ project }) {
   return (
-    <div className="project-item">
-      <h3>{name}</h3>
-      <p>{about}</p>
-      <div className="technologies">
-        {/* render a <span> for each technology in the technologies array */}
-      </div>
+    <div>
+      <h2>{project.title}</h2>
+      <p>{project.description}</p>
+      {/* Display other project details */}
     </div>
   );
 }

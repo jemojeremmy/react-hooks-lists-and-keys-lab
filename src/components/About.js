@@ -1,13 +1,14 @@
-import React from "react";
-import Links from "./Links";
+// About.js
+import React from 'react';
 
-function About({ bio, links }) {
+function About({ github }) {
+  // Ensure github prop is defined before accessing its properties
+  const githubUrl = github ? github.url : '';
+
   return (
-    <div id="about">
-      <h2>About Me</h2>
-      {bio && bio.length > 1 ? <p>{bio}</p> : null}
-      <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      <Links github={links.github} linkedin={links.linkedin} />
+    <div>
+      <h2>About</h2>
+      <p>GitHub URL: <a href={githubUrl}>{githubUrl}</a></p>
     </div>
   );
 }
